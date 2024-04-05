@@ -38,11 +38,11 @@ function actualizarCronometro () {
 botonActivity.addEventListener('click', ()=> {
     if (estadoDelCronometro === 'pausado') {
         intervaloDeTiempo = window.setInterval(actualizarCronometro, 1000);
-        botonActivity.src = 'pause.svg';
+        botonActivity.src = 'media/pause.svg';
         estadoDelCronometro = 'corriendo';
     } else {
         window.clearInterval(intervaloDeTiempo);
-        botonActivity.src = 'play-fill.svg';
+        botonActivity.src = 'media/play-fill.svg';
         estadoDelCronometro = 'pausado';
     }
 });
@@ -55,7 +55,7 @@ botonReinciar.addEventListener('click', ()=> {
     hs = 0;
 
     cronometro.textContent = '00:00:00';
-    botonActivity.src = 'play-fill.svg';
+    botonActivity.src = 'media/play-fill.svg';
 
     estadoDelCronometro = 'pausado'; 
 });
